@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Country } from '../../interfaces/pais.interface';
 import { PaisService } from '../../services/pais.service';
 
@@ -17,7 +17,8 @@ export class PorCapitalComponent {
   constructor(private paisService: PaisService){}
 
   Buscar(termino:string){
-    this.paisService.buscarCapital(termino).subscribe(capitales=>{
+    this.paisService.buscarCapital(termino)
+      .subscribe(capitales=>{
       console.log(capitales);
       this.Capitales = capitales;
 

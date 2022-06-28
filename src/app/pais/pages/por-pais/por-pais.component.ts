@@ -14,7 +14,7 @@ export class PorPaisComponent {
   hayError: boolean = false;
   Paises: Country[] = [];
 
-  sugerencias(termino:string){
+  sugerencias(){
     this.hayError = false;
   }
 
