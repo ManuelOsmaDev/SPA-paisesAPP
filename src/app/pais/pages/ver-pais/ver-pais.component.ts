@@ -11,7 +11,7 @@ import { PaisService } from '../../services/pais.service';
   ]
 })
 export class VerPaisComponent implements OnInit {
-  @Input() Pais: Country[]=[];
+  paises!:Country;
 
   constructor(private activateRoute: ActivatedRoute, private paisService: PaisService) { }
 
@@ -22,7 +22,7 @@ export class VerPaisComponent implements OnInit {
     tap(console.log )
    )
    .subscribe(pais=>{
-    this.Pais = pais;
+    this.paises = pais;
    })
   }
 

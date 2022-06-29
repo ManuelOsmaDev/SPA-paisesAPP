@@ -2,10 +2,12 @@
 <hr>
 <div class="row">
   <div class="col">
-    <app-pais-input placeholder="Buscar por Pais..." (onEnter)="Buscar($event)" (onDebounce)="sugerencias( $event) " ></app-pais-input>
+    <app-pais-input placeholder="Buscar por Pais..." (onEnter)="Buscar($event)" (onDebounce)="sugerencias($event) " ></app-pais-input>
   </div>
 </div>
-
+  <ul class="list-group">
+    <li class="list-group-item list-group-item-action" *ngFor="let pais of PaisesSugeridos"><a [routerLink]="['/pais', pais.cioc]">{{pais.name}}</a></li>
+  </ul>
 <hr>
 <div *ngIf="hayError" class="alert alert-danger">
   No se encontro nada con el termino: {{termino}}

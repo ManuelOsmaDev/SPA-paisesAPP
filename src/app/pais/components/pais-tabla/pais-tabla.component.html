@@ -8,11 +8,11 @@
       <th></th>
     </tr>
   </thead>
-  <tbody>
+  <tbody class="animate__animated animate__bounce">
     <tr *ngFor="let paises of Paises; let i = index">
       <td>{{i+1}}</td>
       <td class="small-flag" ><img [src]="paises.flags.png" alt=""></td>
-      <td>{{paises.capital}} : {{paises.name.common}}</td>
+      <td>{{paises.capital}} : {{paises.name}}</td>
       <td>{{paises.population | number}}</td>
       <td>
         <a [routerLink]="['/pais', paises.cioc]">ver..</a>
